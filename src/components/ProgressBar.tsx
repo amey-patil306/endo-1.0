@@ -4,6 +4,7 @@ import { CheckCircle, Calendar } from 'lucide-react';
 
 interface ProgressBarProps {
   progress: UserProgress;
+  onNewMonth?: () => void;
 }
 
 const ProgressBar: React.FC<ProgressBarProps> = ({ progress }) => {

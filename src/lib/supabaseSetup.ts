@@ -29,7 +29,7 @@ export const testSupabaseConnection = async (): Promise<{
   try {
     // Test basic connection
     console.log('🌐 Testing basic connection...');
-    const { data: healthCheck, error: healthError } = await supabase
+    const { data: _, error: healthError } = await supabase
       .from('symptom_entries')
       .select('count')
       .limit(1);
@@ -93,7 +93,7 @@ export const testSupabaseConnection = async (): Promise<{
 // Function to check if a table exists
 const checkTableExists = async (tableName: string): Promise<boolean> => {
   try {
-    const { data, error } = await supabase
+    const {  error } = await supabase
       .from(tableName)
       .select('count')
       .limit(1);

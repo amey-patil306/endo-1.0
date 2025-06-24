@@ -4,6 +4,7 @@ import { SymptomEntry, UserProgress } from '../types';
 export const generateDummySymptomEntries = (userId: string, numberOfDays: number = 15): SymptomEntry[] => {
   const entries: SymptomEntry[] = [];
   const today = new Date();
+  userId
   
   // Create entries for the past numberOfDays
   for (let i = numberOfDays - 1; i >= 0; i--) {
@@ -17,7 +18,7 @@ export const generateDummySymptomEntries = (userId: string, numberOfDays: number
     const isMidCycle = dayOfCycle >= 12 && dayOfCycle <= 16;
     
     // Higher probability of symptoms during certain cycle phases
-    const baseSymptomChance = 0.3;
+    //const baseSymptomChance = 0.3;
     const periodSymptomChance = 0.7;
     const midCycleChance = 0.4;
     
@@ -79,6 +80,7 @@ export const generateDummySymptomEntries = (userId: string, numberOfDays: number
 
 // Generate realistic notes based on symptoms
 const generateRandomNotes = (dayOfCycle: number, isNearPeriod: boolean): string => {
+  dayOfCycle
   const notes = [
     "Feeling tired today",
     "Pain was manageable with heat therapy",

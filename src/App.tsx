@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 import type { User } from '@supabase/supabase-js';
 import { onAuthStateChange } from './lib/auth';

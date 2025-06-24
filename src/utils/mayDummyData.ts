@@ -6,6 +6,7 @@ export const generateMayDummyData = (userId: string): { entries: SymptomEntry[],
   const year = 2024;
   const month = 4; // May (0-indexed)
   const daysInMay = 31;
+  userId
   
   // Simulate a realistic menstrual cycle starting around May 3rd
   const cycleStartDay = 3;
@@ -21,7 +22,7 @@ export const generateMayDummyData = (userId: string): { entries: SymptomEntry[],
     
     // Define cycle phases
     const isMenstrualPhase = cycleDay <= 7; // Days 1-7
-    const isFollicularPhase = cycleDay >= 8 && cycleDay <= 13; // Days 8-13
+    //const isFollicularPhase = cycleDay >= 8 && cycleDay <= 13; // Days 8-13
     const isOvulationPhase = cycleDay >= 14 && cycleDay <= 16; // Days 14-16
     const isLutealPhase = cycleDay >= 17; // Days 17-28
     
@@ -35,7 +36,7 @@ export const generateMayDummyData = (userId: string): { entries: SymptomEntry[],
     
     // Generate realistic notes based on cycle phase and symptoms
     const generateNotes = (): string => {
-      const notes: string[] = [];
+      //const notes: string[] = [];
       
       if (isMenstrualPhase) {
         const menstrualNotes = [

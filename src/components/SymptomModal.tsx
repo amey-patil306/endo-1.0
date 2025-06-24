@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { SymptomEntry } from '../types';
-import { X, Save, AlertCircle, Wifi, WifiOff } from 'lucide-react';
+import { X, Save,  WifiOff } from 'lucide-react';
 import ToggleSwitch from './ToggleSwitch';
 import toast from 'react-hot-toast';
 

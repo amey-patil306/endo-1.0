@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
-import { format, isAfter, startOfDay, isSameMonth } from 'date-fns';
+import {  isSameMonth } from 'date-fns';
 import SymptomModal from './SymptomModal';
 import { SymptomEntry, UserProgress } from '../types';
 import { getSymptomEntry, saveSymptomEntry, updateUserProgress, subscribeToSymptomEntries, getAllSymptomEntries } from '../lib/database';
@@ -250,7 +250,7 @@ const Calendar: React.FC<CalendarProps> = ({ userId, progress, onProgressUpdate 
         />
       )}
 
-      <style jsx>{`
+      <style>{`
         /* Future dates - faded and not clickable */
         .fc-day-future {
           background-color: #f3f4f6 !important;

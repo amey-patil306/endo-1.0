@@ -208,7 +208,7 @@ const Dashboard: React.FC<DashboardProps> = ({ user }) => {
                             setShowMonthSelector(false);
                             // Reload data for selected month if needed
                             if (month !== getCurrentMonthKey()) {
-                              toast.info(`Viewing data for ${formatMonthDisplay(month)}`);
+                              toast.custom(`Viewing data for ${formatMonthDisplay(month)}`);
                             }
                           }}
                           className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${

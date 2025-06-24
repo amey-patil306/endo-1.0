@@ -552,7 +552,7 @@ export const testSupabaseConnection = async (): Promise<{
     console.log('🔍 Testing Supabase connection and tables...');
     
     // Test basic connection
-    const { data: connectionTest, error: connectionError } = await supabase
+    const { data: _, error: connectionError } = await supabase
       .from('symptom_entries')
       .select('count')
       .limit(1);
